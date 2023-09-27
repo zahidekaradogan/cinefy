@@ -16,7 +16,6 @@ class MoviesPage extends StatefulWidget {
 
 class _MoviesPageState extends State<MoviesPage> {
   Future<List<Movies>> showAllMovies(int category_id) async {
-    //bu metod içerisinde movie nesnesi olan bir liste verecek.Yani bir veri kümesi olacak.
     var movieList = await Moviesdao().allMoviesByCategoryId(category_id);
     return movieList;
   }
